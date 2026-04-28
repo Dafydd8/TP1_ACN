@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1775624722016</Id>
-	<Name><![CDATA[rotonda_base]]></Name>
+	<Name><![CDATA[rotonda_base_TA]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[tp_acn]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -18,9 +18,6 @@
 		<ActiveObjectClass>
 			<Id>1775624722020</Id>
 			<Name><![CDATA[Main]]></Name>
-			<DestroyCode><![CDATA[traceln("cont_autos: " + cont_autos);
-traceln("cont_buses: " + cont_buses);
-]]></DestroyCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1775624722025</Id>
@@ -115,7 +112,7 @@ traceln("cont_buses: " + cont_buses);
 				<Variable Class="PlainVariable">
 					<Id>1776448245661</Id>
 					<Name><![CDATA[throughput]]></Name>
-					<X>790</X><Y>1230</Y>
+					<X>980</X><Y>1180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -149,6 +146,96 @@ traceln("cont_buses: " + cont_buses);
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341041725</Id>
+					<Name><![CDATA[cola_norte]]></Name>
+					<X>980</X><Y>1200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341066073</Id>
+					<Name><![CDATA[cola_sureste1]]></Name>
+					<X>980</X><Y>1220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341069215</Id>
+					<Name><![CDATA[cola_sureste2]]></Name>
+					<X>980</X><Y>1240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341550581</Id>
+					<Name><![CDATA[max_cola_norte]]></Name>
+					<X>980</X><Y>1260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341550585</Id>
+					<Name><![CDATA[max_cola_sureste1]]></Name>
+					<X>980</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341550587</Id>
+					<Name><![CDATA[max_cola_sureste2]]></Name>
+					<X>980</X><Y>1300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 			</Variables>
@@ -663,8 +750,8 @@ traceln("cont_buses: " + cont_buses);
 			<AnalysisData>
     			<Statistics>
 					<Id>1776447677768</Id>
-					<Name><![CDATA[statsEspera]]></Name>
-					<X>790</X><Y>1260</Y>
+					<Name><![CDATA[statsDPI]]></Name>
+					<X>1130</X><Y>1180</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -757,9 +844,9 @@ traceln("cont_buses: " + cont_buses);
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[//car.waitTime = time() - car.enterTime;
-//statsEspera.add(car.waitTime);
-//throughput++;
+								<Code><![CDATA[if (time() > 900){
+	throughput++;
+}
 //if (statsEspera.count() > 10) {
 //    dataEspera.add(throughput, statsEspera.mean());
 //}
@@ -981,8 +1068,8 @@ traceln("cont_buses: " + cont_buses);
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime=time();
-traceln("enterTime seteado: " + car.enterTime);
-cont_autos++;]]></Code>
+cont_autos++;
+car.origen = "norte";]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1220,8 +1307,8 @@ cont_autos++;]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime = time();
-traceln("enterTime seteado: " + car.enterTime);
-cont_autos++;]]></Code>
+cont_autos++;
+car.origen = "sureste2";]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1466,8 +1553,8 @@ cont_autos++;]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime= time();
-traceln("enterTime seteado: " + car.enterTime);
-cont_autos++;]]></Code>
+cont_autos++;
+car.origen = "sureste1";]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1809,9 +1896,9 @@ cont_autos++;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[//car.waitTime = time() - car.enterTime;
-//statsEspera.add(car.waitTime);
-//throughput++;
+								<Code><![CDATA[if (time() > 900){
+	throughput++;
+}
 //if (statsEspera.count() > 10) {
 //    dataEspera.add(throughput, statsEspera.mean());
 //}
@@ -1880,9 +1967,9 @@ cont_autos++;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[//car.waitTime = time() - car.enterTime;
-//statsEspera.add(car.waitTime);
-//throughput++;
+								<Code><![CDATA[if (time() > 900){
+	throughput++;
+}
 //if (statsEspera.count() > 10) {
 //    dataEspera.add(throughput, statsEspera.mean());
 //}
@@ -2377,7 +2464,7 @@ cont_autos++;]]></Code>
 				<EmbeddedObject>
 					<Id>1776444118522</Id>
 					<Name><![CDATA[roadNetworkDescriptor]]></Name>
-					<X>800</X><Y>1120</Y>
+					<X>580</X><Y>1390</Y>
 					<Label><X>-75</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2393,7 +2480,7 @@ cont_autos++;]]></Code>
 							<ItemName><![CDATA[1431616410057]]></ItemName>
 						</GenericParameterSubstituteReference>
 						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Vehicle]]></Code>
+							<Code><![CDATA[Car]]></Code>
 						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -2449,6 +2536,20 @@ cont_autos++;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onStop]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (car.origen.equals("norte")) {
+    cola_norte++;
+    max_cola_norte = max(max_cola_norte, cola_norte);
+}
+if (car.origen.equals("sureste1")) {
+    cola_sureste1++;
+    max_cola_sureste1 = max(max_cola_sureste1, cola_sureste1);
+}
+if (car.origen.equals("sureste2")) {
+    cola_sureste2++;
+    max_cola_sureste2 = max(max_cola_sureste2, cola_sureste2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onResumeMoving]]></Name>
@@ -2661,8 +2762,8 @@ cont_autos++;]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime=time();
-traceln("Nuevo bus en: " + car.enterTime);
-cont_buses++;]]></Code>
+cont_buses++;
+car.origen = "norte";]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -2861,8 +2962,8 @@ cont_buses++;]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime=time();
-traceln("Nuevo bus en: " + car.enterTime);
-cont_buses++;]]></Code>
+cont_buses++;
+car.origen = "sureste1";]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -3061,8 +3162,8 @@ cont_buses++;]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[car.enterTime=time();
-traceln("Nuevo bus en: " + car.enterTime);
-cont_buses++;]]></Code>
+cont_buses++;
+car.origen = "sureste2";]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -3197,7 +3298,6 @@ cont_buses++;]]></Code>
 				<RoadStopline>
 					<Id>1775629787643</Id>
 					<Name><![CDATA[stopLine3]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -3232,6 +3332,9 @@ cont_buses++;]]></Code>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[cola_norte = max(0, cola_norte - 1);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -3252,70 +3355,6 @@ cont_buses++;]]></Code>
 						<InitializationType>SPECIFIED_NUMBER</InitializationType>
 						<InitializationDatabaseTableQuery>
 							<Id>1775629787641</Id>
-							<TableReference>
-							</TableReference>
-						</InitializationDatabaseTableQuery>
-						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-						<QuantityColumn>
-						</QuantityColumn>
-					</EmbeddedObject>
-				</RoadStopline>
-				<RoadStopline>
-					<Id>1776269344444</Id>
-					<Name><![CDATA[stopLine5]]></Name>
-					<X>450.096</X><Y>488.241</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>68.0</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<LeftLane>1</LeftLane>
-					<RightLane>0</RightLane>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-					<EmbeddedObject>
-						<Id>1776269344448</Id>
-						<ActiveObjectClass>
-							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-						</ActiveObjectClass>
-						<GenericParameterSubstitute>
-							<GenericParameterSubstituteReference>
-								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-								<ItemName><![CDATA[1587667461380]]></ItemName>
-							</GenericParameterSubstituteReference>
-						</GenericParameterSubstitute>
-						<Parameters>
-							<Parameter>
-								<Name><![CDATA[onCarPassed]]></Name>
-							</Parameter>
-						</Parameters>
-						<ReplicationFlag>false</ReplicationFlag>
-						<Replication Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
-						</Replication>
-						<CollectionType>ARRAY_LIST_BASED</CollectionType>
-						<InitialLocationType>XYZ</InitialLocationType>
-						<ColumnCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ColumnCode>
-						<RowCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</RowCode>
-						<LocationNameCode Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</LocationNameCode>
-						<InitializationType>SPECIFIED_NUMBER</InitializationType>
-						<InitializationDatabaseTableQuery>
-							<Id>1776269344447</Id>
 							<TableReference>
 							</TableReference>
 						</InitializationDatabaseTableQuery>
@@ -3727,7 +3766,6 @@ cont_buses++;]]></Code>
 				<RoadStopline>
 					<Id>1775628319898</Id>
 					<Name><![CDATA[stopLine2]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -3758,10 +3796,19 @@ cont_buses++;]]></Code>
 								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
 								<ItemName><![CDATA[1587667461380]]></ItemName>
 							</GenericParameterSubstituteReference>
+							<GenericParameterSubstituteValue Class="CodeValue">
+								<Code><![CDATA[Car]]></Code>
+							</GenericParameterSubstituteValue>
 						</GenericParameterSubstitute>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[if (time() > 900){
+	double demora = time() - car.enterTime;
+	statsDPI.add(demora);
+}]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -3968,6 +4015,9 @@ cont_buses++;]]></Code>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[cola_sureste2 = max(0, cola_sureste2 - 1);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -4122,6 +4172,9 @@ cont_buses++;]]></Code>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[cola_sureste1 = max(0, cola_sureste1 - 1);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -4196,6 +4249,81 @@ cont_buses++;]]></Code>
 						<Point><X>344.99966666666666</X><Y>-43</Y><Z>0</Z></Point>
 					</Points>
 
+			<Presentation>
+				<RoadStopline>
+					<Id>1777340443739</Id>
+					<Name><![CDATA[stopLine6]]></Name>
+					<X>506.382</X><Y>410.607</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>39.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<Id>1777340443743</Id>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+							<GenericParameterSubstituteValue Class="CodeValue">
+								<Code><![CDATA[Car]]></Code>
+							</GenericParameterSubstituteValue>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[if (time() > 900){
+	double demora = time() - car.enterTime;
+	statsDPI.add(demora);
+}]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>XYZ</InitialLocationType>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<Id>1777340443742</Id>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+			</Presentation>
 
 				</Road>
 			</Presentation>
@@ -4288,7 +4416,7 @@ cont_buses++;]]></Code>
     			<Plot>
 					<Id>1776455014081</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>920</X><Y>1140</Y>
+					<X>780</X><Y>1320</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4354,6 +4482,76 @@ cont_buses++;]]></Code>
 					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
 					<HorScaleType>AUTO</HorScaleType>
     			</Plot>
+    			<TimePlot>
+					<Id>1777317818122</Id>
+					<Name><![CDATA[plot1]]></Name>
+					<X>1120</X><Y>1210</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<RecurrenceProperties>
+						<Id>1777317818120</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1777363200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+					</RecurrenceProperties>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[45]]></VerScaleToExpression>
+					<VerScaleType>FIXED</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Mean DPI]]></Title>
+					<Id>1777317819778</Id>
+					<Expression><![CDATA[dataset]]></Expression>
+					<Color>-14774017</Color>
+					<Expression2><![CDATA[statsDPI.mean()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[8100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
 			</Presentation>
 
 				</Level>
@@ -4477,6 +4675,21 @@ cont_buses++;]]></Code>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1777341232809</Id>
+					<Name><![CDATA[origen]]></Name>
+					<X>330</X><Y>270</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[String]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 			</Variables>
@@ -4952,6 +5165,15 @@ cont_buses++;]]></Code>
 			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<AfterSimulationRunCode><![CDATA[double PVC = root.throughput / (root.cont_buses + root.cont_autos);
+double DPI_mean = root.statsDPI.mean();
+
+traceln("Thorughput: " + root.throughput/((time()-900) / 3600));
+traceln("PVC: " + PVC);
+traceln("DPI: " + DPI_mean);
+traceln("max_cola_norte: " + root.max_cola_norte);
+traceln("max_cola_sureste1: " + root.max_cola_sureste1);
+traceln("max_cola_sureste2: " + root.max_cola_sureste2);]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
@@ -4995,8 +5217,8 @@ cont_buses++;]]></Code>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1775606400000]]></InitialDate>
 				<InitialTime><![CDATA[0.0]]></InitialTime>
-				<FinalDate><![CDATA[1778198400000]]></FinalDate>
-				<FinalTime><![CDATA[100.0]]></FinalTime>
+				<FinalDate><![CDATA[1775614500000]]></FinalDate>
+				<FinalTime><![CDATA[8100.0]]></FinalTime>
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
