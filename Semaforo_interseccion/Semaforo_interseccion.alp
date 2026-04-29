@@ -974,13 +974,13 @@
 						<Parameter>
 							<Name><![CDATA[probability1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[5]]></Code>
+								<Code><![CDATA[0.75]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[4]]></Code>
+								<Code><![CDATA[0.25]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1102,7 +1102,7 @@
 						<Parameter>
 							<Name><![CDATA[probability1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[2]]></Code>
+								<Code><![CDATA[1]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1679,13 +1679,13 @@
 						<Parameter>
 							<Name><![CDATA[probability1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[5]]></Code>
+								<Code><![CDATA[0.72]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[4]]></Code>
+								<Code><![CDATA[0.28]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5327,7 +5327,7 @@ runId++;]]></AfterSimulationRunCode>
 					<Code><![CDATA[90]]></Code>
 				</To>
 				<Step Class="CodeValue">
-					<Code><![CDATA[30]]></Code>
+					<Code><![CDATA[15]]></Code>
 				</Step>
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
@@ -5340,7 +5340,7 @@ runId++;]]></AfterSimulationRunCode>
 					<Code><![CDATA[90]]></Code>
 				</To>
 				<Step Class="CodeValue">
-					<Code><![CDATA[30]]></Code>
+					<Code><![CDATA[15]]></Code>
 				</Step>
 			</RangeVariationParamValue>
 			<ModelTimeProperties>
@@ -5359,7 +5359,7 @@ runId++;]]></AfterSimulationRunCode>
 			<ReplicationsProperties>
 				<UseReplication>true</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
-				<ReplicationPerIteration>10</ReplicationPerIteration>
+				<ReplicationPerIteration>5</ReplicationPerIteration>
 				<MinimumReplication>2</MinimumReplication>
 				<MaximumReplication>10</MaximumReplication>
 				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>

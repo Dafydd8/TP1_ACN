@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Cambiá el nombre si tu archivo se llama distinto
-df = pd.read_csv("Semaforo_interseccion/resultados_parametros.csv")
+df = pd.read_csv("resultados_parametros.csv")
 
 # Cola máxima global de cada corrida
 df["max_cola_global"] = df[
@@ -48,11 +48,11 @@ resumen["score_pvc"] = 1 - minmax(resumen["pvc_mean"])
 
 # Score final: menor es mejor
 resumen["score_final"] = (
-    0.30 * resumen["score_dpi"] +
+    0.35 * resumen["score_dpi"] +
     0.35 * resumen["score_cola"] +
-    0.15 * resumen["score_cola_prom"] +
-    0.10 * resumen["score_throughput"] +
-    0.10 * resumen["score_pvc"]
+    0.1 * resumen["score_cola_prom"] +
+    0.1 * resumen["score_throughput"] +
+    0.1 * resumen["score_pvc"]
 )
 
 ranking = resumen.sort_values("score_final")
@@ -94,4 +94,4 @@ print(f"Duración RP56: {mejor_colas['duracion56']} s")
 print(f"Cola máxima global promedio: {mejor_colas['max_cola_global_mean']:.2f}")
 
 # Guardar resumen ordenado
-ranking.to_csv("Semaforo_interseccion/ranking_configuraciones_semaforo.csv", index=False)
+ranking.to_csv("ranking_configuraciones_semaforo.csv", index=False)
