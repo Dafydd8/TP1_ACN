@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1776265623485</Id>
-	<Name><![CDATA[rotonda_puente_TA]]></Name>
+	<Name><![CDATA[rotonda_puente_TB]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[rotonda_trebol]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -1752,7 +1752,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.44)]]></Code>
+								<Code><![CDATA[exponential(0.0714)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -1994,7 +1994,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.24)]]></Code>
+								<Code><![CDATA[exponential(0.03995)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -2238,7 +2238,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.17)]]></Code>
+								<Code><![CDATA[exponential(0.0272)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -2486,7 +2486,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.078)]]></Code>
+								<Code><![CDATA[exponential(0.0126)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -2692,7 +2692,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.03)]]></Code>
+								<Code><![CDATA[exponential(0.0048)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -2898,7 +2898,7 @@
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[exponential(0.044)]]></Code>
+								<Code><![CDATA[exponential(0.00705)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -5374,7 +5374,7 @@ if (car.enterTime > 900){
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<InitialSetupCode><![CDATA[try {
     java.io.PrintWriter writer = new java.io.PrintWriter(
-        new java.io.FileWriter("resultados_TA.csv", false)
+        new java.io.FileWriter("resultados_TB.csv", false)
     );
 
     writer.println("id,dpi,max_cola_norte,max_cola_sureste1,max_cola_sureste2,throughput,pvc");
@@ -5400,7 +5400,7 @@ double DPI = root.statsDPI.mean();
 
 try {
     java.io.PrintWriter writer = new java.io.PrintWriter(
-        new java.io.FileWriter("resultados_TA.csv", true)
+        new java.io.FileWriter("resultados_TB.csv", true)
     );
 
     writer.printf(
@@ -5457,7 +5457,7 @@ runId++;]]></AfterSimulationRunCode>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-12490271</Color>
-					<Text><![CDATA[rotonda_puente_TA : runs]]></Text>
+					<Text><![CDATA[rotonda_puente_TB : runs]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
