@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1776265623485</Id>
-	<Name><![CDATA[rotonda_trebol_TA]]></Name>
+	<Name><![CDATA[rotonda_rulo_TA]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[rotonda_trebol]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>

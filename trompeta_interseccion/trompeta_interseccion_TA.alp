@@ -6022,19 +6022,6 @@
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
-				<Control Type="Window3D">
-					<Id>1777430576804</Id>
-					<Name><![CDATA[window3d]]></Name>
-					<X>1120</X><Y>120</Y>
-					<Width>500</Width>
-					<Height>300</Height>
-					<MakeDefaultViewArea>true</MakeDefaultViewArea>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<ShowLabel>false</ShowLabel>
-					<FollowCamera>false</FollowCamera>
-					<NavigationType>full</NavigationType>
-					<FarClippingDistance>2000</FarClippingDistance>
-				</Control>
 			</Presentation>
 
 				</Level>
