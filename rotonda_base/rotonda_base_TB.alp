@@ -5405,7 +5405,7 @@ runId++;]]></AfterSimulationRunCode>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-12490271</Color>
-					<Text><![CDATA[rotonda_base_TA : MonteCarlo]]></Text>
+					<Text><![CDATA[rotonda_base_TB : runs]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
