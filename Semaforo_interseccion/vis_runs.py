@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Cambiá el nombre si tu archivo se llama distinto
-df = pd.read_csv("resultados_parametros_TB.csv")
+df = pd.read_csv("resultados_parametros_TA.csv")
 
 # Cola máxima global de cada corrida
 df["max_cola_global"] = df[
@@ -94,4 +94,4 @@ print(f"Duración RP56: {mejor_colas['duracion56']} s")
 print(f"Cola máxima global promedio: {mejor_colas['max_cola_global_mean']:.2f}")
 
 # Guardar resumen ordenado
-ranking.to_csv("ranking_configuraciones_semaforo_TB.csv", index=False)
+ranking.to_csv("ranking_configuraciones_semaforo_TA.csv", index=False)

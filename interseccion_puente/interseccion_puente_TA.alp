@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1776265623485</Id>
-	<Name><![CDATA[rotonda_puente_TA]]></Name>
+	<Name><![CDATA[interseccion_puente_TA]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[rotonda_trebol]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -3220,7 +3220,6 @@
 				<Image>
 					<Id>1777502534123</Id>
 					<Name><![CDATA[image]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>0</X><Y>120</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
